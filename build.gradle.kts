@@ -28,6 +28,7 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
 	runtimeOnly("org.postgresql:postgresql")
+	runtimeOnly("mysql:mysql-connector-java")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 

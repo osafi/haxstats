@@ -1,8 +1,10 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/haxstats
+    url: jdbc:mysql://localhost:3306/haxstats
     username: haxstats
     password: haxstats
+  flyway:
+    locations: classpath:db/migration/common,classpath:db/migration/{vendor}
   jpa:
     hibernate:
       ddl-auto: validate

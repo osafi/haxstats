@@ -1,12 +1,22 @@
 version: '3.1'
 
 services:
+#  db:
+#    image: postgres
+#    restart: always
+#    ports:
+#      - 5432:5432
+#    environment:
+#      POSTGRES_DB: haxstats
+#      POSTGRES_USER: haxstats
+#      POSTGRES_PASSWORD: haxstats
   db:
-    image: postgres
+    image: mysql
     restart: always
     ports:
-      - 5432:5432
+      - 3306:3306
     environment:
-      POSTGRES_DB: haxstats
-      POSTGRES_USER: haxstats
-      POSTGRES_PASSWORD: haxstats
+      MYSQL_ROOT_PASSWORD: haxstats
+      MYSQL_DATABASE: haxstats
+      MYSQL_USER: haxstats
+      MYSQL_PASSWORD: haxstats

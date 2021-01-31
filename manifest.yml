@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: haxstats
+  - name: haxstats-api
     memory: 1024M
     instances: 1
     path: ./build/libs/haxstats-0.0.1-SNAPSHOT.jar

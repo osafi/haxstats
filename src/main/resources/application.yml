@@ -4,7 +4,7 @@ spring:
     username: haxstats
     password: haxstats
   flyway:
-    locations: classpath:db/migration/common,classpath:db/migration/{vendor}
+    locations: classpath:db/migration
   jpa:
     hibernate:
       ddl-auto: validate

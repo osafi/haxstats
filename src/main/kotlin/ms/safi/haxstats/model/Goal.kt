@@ -1,6 +1,5 @@
 package ms.safi.haxstats.model
 
-import org.springframework.data.jpa.domain.AbstractPersistable
 import javax.persistence.Entity
 
 @Entity
@@ -9,4 +8,4 @@ class Goal(
     val scorerAuth: String,
     val assisterAuth: String,
     val ownGoal: Boolean
-) : AbstractPersistable<Long>()
+) : AbstractEntity<Long>()

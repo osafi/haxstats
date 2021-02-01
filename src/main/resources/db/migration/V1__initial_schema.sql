@@ -1,3 +1,9 @@
+CREATE TABLE hibernate_sequence
+(
+    next_val BIGINT NULL
+);
+INSERT INTO hibernate_sequence (next_val) VALUES (1);
+
 CREATE TABLE game
 (
     id              BIGINT PRIMARY KEY,
@@ -12,17 +18,6 @@ CREATE TABLE player
 (
     auth VARCHAR(50) PRIMARY KEY,
     name VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE game_player
-(
-    id          BIGINT PRIMARY KEY,
-    game_id     BIGINT      NOT NULL,
-    player_auth VARCHAR(50) NOT NULL,
-    team        VARCHAR(4)  NOT NULL,
-    CONSTRAINT fk_game_players_game_id FOREIGN KEY (game_id) REFERENCES game (id),
-    CONSTRAINT fk_game_players_player_auth FOREIGN KEY (player_auth) REFERENCES player (auth),
-    CONSTRAINT uq_game_players_game_id_player_auth UNIQUE (game_id, player_auth)
 );
 
 CREATE TABLE goal
@@ -43,6 +38,7 @@ CREATE TABLE player_stat
     id            BIGINT PRIMARY KEY,
     game_id       BIGINT        NOT NULL,
     player_auth   VARCHAR(50)   NOT NULL,
+    team          VARCHAR(4)    NOT NULL,
     possession    DECIMAL(5, 2) NOT NULL,
     shots_on_goal SMALLINT      NOT NULL,
     goals         SMALLINT      NOT NULL,

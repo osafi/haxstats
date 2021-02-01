@@ -1,6 +1,7 @@
 POST http://localhost:8080/players
 Accept: application/json
 Content-Type: application/json
+Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
 
 {
   "auth": "qwer",
@@ -13,6 +14,7 @@ Content-Type: application/json
 POST http://localhost:8080/players
 Accept: application/json
 Content-Type: application/json
+Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
 
 {
 "auth": "asdf",
@@ -25,6 +27,7 @@ Content-Type: application/json
 POST http://localhost:8080/games
 Accept: application/json
 Content-Type: application/json
+Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
 
 {
   "redScore": 5,
@@ -32,16 +35,6 @@ Content-Type: application/json
   "redPossession": 75,
   "bluePossession": 25,
   "winningTeam": "RED",
-  "players": [
-    {
-      "team": "RED",
-      "playerAuth": "asdf"
-    },
-    {
-      "team": "BLUE",
-      "playerAuth": "qwer"
-    }
-  ],
   "goals": [
     {
       "scoringTeam": "RED",
@@ -53,6 +46,7 @@ Content-Type: application/json
   "playerStats": [
     {
       "playerAuth": "asdf",
+      "team": "RED",
       "possession": 37.5,
       "shotsOnGoal": 5,
       "goals": 2,
@@ -63,6 +57,7 @@ Content-Type: application/json
     },
     {
       "playerAuth": "qwer",
+      "team": "RED",
       "possession": 62.5,
       "shotsOnGoal": 20,
       "goals": 4,

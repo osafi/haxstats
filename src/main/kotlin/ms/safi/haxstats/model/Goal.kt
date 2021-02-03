@@ -6,6 +6,6 @@ import javax.persistence.Entity
 class Goal(
     val scoringTeam: String,
     val scorerAuth: String,
-    val assisterAuth: String,
+    val assisterAuth: String?,
     val ownGoal: Boolean
 ) : AbstractEntity<Long>()

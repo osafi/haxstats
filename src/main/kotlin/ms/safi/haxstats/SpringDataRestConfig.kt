@@ -12,6 +12,7 @@ class SpringDataRestConfig : RepositoryRestConfigurer {
             .allowedOrigins("*")
             .allowedMethods("*")
             .allowedHeaders("Authorization", "Content-Type")
+            .exposedHeaders("Location")
             .allowCredentials(false)
     }
 }

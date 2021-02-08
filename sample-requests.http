@@ -1,7 +1,7 @@
 POST http://localhost:8080/players
 Accept: application/json
 Content-Type: application/json
-Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
+Authorization: Basic user pass
 
 {
   "auth": "qwer",
@@ -14,7 +14,7 @@ Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
 POST http://localhost:8080/players
 Accept: application/json
 Content-Type: application/json
-Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
+Authorization: Basic user pass
 
 {
 "auth": "asdf",
@@ -27,7 +27,7 @@ Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
 POST http://localhost:8080/games
 Accept: application/json
 Content-Type: application/json
-Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
+Authorization: Basic user pass
 
 {
   "redScore": 5,
@@ -39,7 +39,7 @@ Authorization: Basic user e0f64ae0-c7ec-4e3e-b49f-0c1327a7a7f0
     {
       "scoringTeam": "RED",
       "scorerAuth": "asdf",
-      "assisterAuth": "qwer",
+      "assisterAuth": null,
       "ownGoal": false
     }
   ],
